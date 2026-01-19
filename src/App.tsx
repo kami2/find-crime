@@ -9,9 +9,10 @@ import 'maplibre-gl/dist/maplibre-gl.css';
 
 const UK_BOUNDS: [number, number, number, number] = [-9.0, 49.5, 2.5, 61.0];
 
+// Bristol Coordinates
 const INITIAL_VIEW_STATE = {
-  longitude: -2.1794,
-  latitude: 53.0027,
+  longitude: -2.5879,
+  latitude: 51.4545,
   zoom: 13,
   pitch: 0,
   bearing: 0
@@ -129,7 +130,7 @@ function App() {
   const [viewState, setViewState] = useState(INITIAL_VIEW_STATE);
   const [data, setData] = useState<CrimePoint[]>([]);
   const [loading, setLoading] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('Stoke-on-Trent');
+  const [searchQuery, setSearchQuery] = useState('Bristol'); // Changed default city
   
   const [selectedYear, setSelectedYear] = useState(currentYear.toString());
   const [selectedMonth, setSelectedMonth] = useState('01');
